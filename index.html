@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pondicherry Trip</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    let index = 0;
+    const images = [
+      "img/p1.jpg",
+      "img/p2.jpg",
+      "img/p3.jpg",
+      "img/p4.jpg",
+      "img/p5.jpg",
+    ];
+
+    function changeImage() {
+      index++;
+      if (index >= images.length) {
+        index = 0;
+      }
+      document.getElementById("gallery").src = images[index];
+      setTimeout(changeImage, 2000); // Change image every 10 seconds
+    }
+  </script>
+</head>
+<body onload="changeImage()">
+  <div id="header">
+    <h1>Pondicherry Trip</h1>
+  </div>
+  
+  <div id="main">
+    <div class="feature">
+        <h2>Beautiful Beaches</h2>
+        <img src="beaches.jpg" alt="Beach">
+        <p>Pondicherry is home to some of the most beautiful beaches in India. Relax on the sandy shores and soak up the sun, or take a dip in the clear blue waters.</p>
+      </div>
+      
+      <div class="feature">
+        <h2>French Architecture</h2>
+        <img src="french.jpg" alt="Architecture">
+        <p>Pondicherry is a former French colony, and the city is still filled with beautiful examples of French architecture. Take a walking tour to explore the historic buildings and streets.</p>
+      </div>
+      
+      <div class="feature">
+        <h2>Delicious Food</h2>
+        <img src="cuisine.jpg" alt="Food">
+        <p>Pondicherry is known for its delicious cuisine, which combines Indian and French flavors. Be sure to try some of the local specialties, like dosas, crepes, and seafood.</p>
+      </div>
+      
+      <div class="feature">
+        <h2>Spiritual Retreats</h2>
+        <img src="spiritual.jpg" alt="Meditation">
+        <p>Pondicherry is home to several spiritual retreats and ashrams, where you can practice meditation and yoga. Take some time to connect with yourself and find inner peace.</p>
+      </div>
+      
+      
+      <div class="feature">
+        <h2>Shopping</h2>
+        <img src="shop.jpg" alt="Shopping">
+        <p>Pondicherry has a vibrant shopping scene, with markets, boutiques, and galleries selling everything from textiles to handicrafts. Don't forget to pick up some souvenirs!</p>
+      </div>
+      <div id="gallery-section">
+        <h2>Some Glimpses....</h2>
+        <img id="gallery" src="img/gallery1.jpg" alt="Gallery Image">
+      </div>
+  </div>
+  <div id="footer">
+    <p>&copy; 2023 Pondicherry Trip</p>
+  </div>
+</body>
+</html>
+ 
